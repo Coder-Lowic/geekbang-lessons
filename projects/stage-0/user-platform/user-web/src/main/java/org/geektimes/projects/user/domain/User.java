@@ -1,9 +1,14 @@
 package org.geektimes.projects.user.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -35,6 +40,7 @@ public class User implements Serializable {
     private String email;
 
     @Column
+    @Pattern(regexp = "1[3|4578][0-9]\\d{8}")
     private String phoneNumber;
 
     public Long getId() {
