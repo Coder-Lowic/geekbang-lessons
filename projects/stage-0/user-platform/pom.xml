@@ -276,7 +276,9 @@
                 <version>${maven.compiler.version}</version>
                 <configuration>
                     <compilerArgs>
+                        <!-- 控制是否执行注释处理和/或编译 -->
                         <compilerArg>-proc:none</compilerArg>
+                        <!-- 参数名称是否编译进class文件 -->
                         <compilerArg>-parameters</compilerArg>
                     </compilerArgs>
                     <fork>true</fork>
