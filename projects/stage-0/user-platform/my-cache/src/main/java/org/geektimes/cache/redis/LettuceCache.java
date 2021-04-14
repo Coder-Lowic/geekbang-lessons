@@ -1,17 +1,17 @@
 package org.geektimes.cache.redis;
 
-import org.geektimes.cache.AbstractCache;
 import org.geektimes.cache.ExpirableEntry;
 import org.geektimes.cache.utils.SerializeUtil;
 import redis.clients.jedis.Jedis;
 
 import javax.cache.CacheException;
 import javax.cache.CacheManager;
-import javax.cache.configuration.Configuration;
-import java.io.Serializable;
-import java.util.Set;
 
-public class JedisCache<K extends Serializable, V extends Serializable> extends AbstractCache<K, V> {
+/**
+ * @author Lowic
+ * @date 2021/4/13
+ */
+public class LettuceCache {
 
     private final Jedis jedis;
 
